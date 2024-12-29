@@ -1,72 +1,71 @@
 import { css } from '@emotion/react';
 
-/** 전체 레이아웃 */
 export const SLayout = css`
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 90px 0 50px;
     width: 100%;
-    height: calc(100vh - 110px);
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-`;
-
-export const Container = css`
-    width: 900px;
 `;
 
 export const Title = css`
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #e9f0e2;
+    width: 100%;
+    span {
+        font-size: 24px;
+        font-weight: bold;
+        width: 1200px;
+        color: #242424;
+    }
 `;
 
 export const NoticeList = css`
+    width: 1200px;
     list-style: none;
     padding: 0;
     margin: 0;
+    & * {
+        color: #575757;
+    }
 `;
 
 export const NoticeItem = css`
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-    margin-bottom: 20px;
+    
 `;
 
 export const NoticeHeader = css`
     display: flex;
     justify-content: space-between;
     align-items: center;
-`;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 30px 0;
+    `;
 
 export const NoticeTitle = css`
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+    font-weight: 600;
+    font-size: 18px;
 `;
 
 export const NoticeDate = css`
+    margin-right: 20px;
     font-size: 14px;
-    color: #888;
 `;
 
 export const ToggleButton = css`
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    color: #007BFF;
-
-    &:hover {
-        color: #0056b3;
-    }
+    font-size: 18px;
 `;
 
 export const NoticeContent = css`
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 70px 0;
+    font-size: 16px;
     line-height: 1.5;
     white-space: pre-wrap; /* 개행 유지 */
 `;
