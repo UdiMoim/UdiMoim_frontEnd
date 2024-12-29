@@ -19,13 +19,14 @@ export const SLayout = css`
 
     p {
         font-size: 14px;
-        font-weight: 100;
+        font-weight: 300;
         line-height: 20px;
         letter-spacing: 0.5px;
         margin: 20px 0 30px;
     }
 
     span {
+        margin-bottom: 5px;
         font-size: 12px;
     }
 
@@ -37,13 +38,14 @@ export const SLayout = css`
     }
 
     button {
+        margin-top: 10px;
         border-radius: 20px;
         border: 1px solid #75c32c;
         background-color: #75c32c;
         color: #FFFFFF;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 12px 45px;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px 45px;
         letter-spacing: 1px;
         text-transform: uppercase;
         transition: transform 80ms ease-in;
@@ -71,7 +73,7 @@ export const SLayout = css`
         background-color: #eee;
         border: none;
         padding: 12px 15px;
-        margin: 8px 0;
+        margin: 4px 0;
         width: 100%;
     }
 `;
@@ -139,7 +141,7 @@ export const SOverlayContainer = (isRightPanelActive) => css`
 
 export const SOverlay = (isRightPanelActive) => css`
     background: rgb(117,195,44);
-    background: linear-gradient(90deg, rgba(117,195,44,1) 0%, rgba(196,215,178,1) 100%);
+    background: linear-gradient(90deg, rgba(44,195,176,1) 0%, rgba(117,195,44,1) 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
