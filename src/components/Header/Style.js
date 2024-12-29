@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 /** @jsxImportSource @emotion/react */
 
 export const SLayout = css`
-    position: absolute; /* 또는 fixed */
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;

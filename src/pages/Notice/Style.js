@@ -4,7 +4,7 @@ export const SLayout = css`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 90px 0 50px;
+    padding: 110px 0 50px;
     width: 100%;
 `;
 
