@@ -27,41 +27,41 @@ function Notice() {
         }
     ];
 
-    const [openIndexes, setOpenIndexes] = useState([]); // 열려 있는 공지사항들의 index를 관리
+    const [openIndexes, setOpenIndexes] = useState([]);
 
     const toggleContent = (index) => {
-        if (openIndexes.includes(index)) {
-            // 이미 열려 있는 경우 닫기
+        if (openIndexes.includes(index)) {  // 이미 열려 있는 경우 닫기
             setOpenIndexes(openIndexes.filter((i) => i !== index));
-        } else {
-            // 닫혀 있는 경우 열기
+        } else {    // 닫혀 있는 경우 열기
             setOpenIndexes([...openIndexes, index]);
         }
     };
 
     return (
         <div css={S.SLayout}>
-            <div css={S.Container}>
-                <h2 css={S.Title}>공지사항</h2>
-                <ul css={S.NoticeList}>
-                    {noticeData.map((notice, index) => (
-                        <li key={index} css={S.NoticeItem}>
-                            <div css={S.NoticeHeader}>
-                                <span css={S.NoticeTitle}>{notice.title}</span>
-                                <span css={S.NoticeDate}>{notice.date}</span>
-                                <button css={S.ToggleButton} onClick={() => toggleContent(index)}>
-                                    {openIndexes.includes(index) ? <FaMinus /> : <FaPlus />}
-                                </button>
-                            </div>
-                            {openIndexes.includes(index) && (
-                                <div css={S.NoticeContent}>
-                                    {notice.content}
-                                </div>
-                            )}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            <h2 css={S.Title}>
+                <span>공지사항</span>
+            </h2>
+            <ul css={S.NoticeList}>
+            {noticeData.map((notice, index) => (
+                <li key={index} css={S.NoticeItem}>
+                    <div css={S.NoticeHeader}>
+                        <span css={S.NoticeTitle}>{notice.title}</span>
+                        <div>
+                            <span css={S.NoticeDate}>{notice.date}</span>
+                            <button css={S.ToggleButton} onClick={() => toggleContent(index)}>
+                                {openIndexes.includes(index) ? <FaMinus /> : <FaPlus />}
+                            </button>
+                        </div>
+                    </div>
+                    {openIndexes.includes(index) && (
+                        <div css={S.NoticeContent}>
+                            {notice.content}
+                        </div>
+                    )}
+                </li>
+            ))}
+            </ul>
         </div>
     );
 }
