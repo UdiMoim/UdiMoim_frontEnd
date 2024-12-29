@@ -21,7 +21,7 @@ export const SLogo = css`
 export const SMenuContainer = css`
     display: flex;
     justify-content: start;
-    width: 1000px;
+    width: 1250px;
     a {
         transition: all 0.1s ease;
         margin-right: 40px;

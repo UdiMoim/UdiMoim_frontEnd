@@ -4,7 +4,6 @@ export const SLayout = css`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 110px 0 50px;
     width: 100%;
 `;
 
@@ -12,7 +11,7 @@ export const Title = css`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    padding: 110px 0 20px;
     background-color: #e9f0e2;
     width: 100%;
     span {
@@ -31,10 +30,6 @@ export const NoticeList = css`
     & * {
         color: #575757;
     }
-`;
-
-export const NoticeItem = css`
-    
 `;
 
 export const NoticeHeader = css`

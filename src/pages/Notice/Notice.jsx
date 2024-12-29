@@ -44,7 +44,7 @@ function Notice() {
             </h2>
             <ul css={S.NoticeList}>
             {noticeData.map((notice, index) => (
-                <li key={index} css={S.NoticeItem}>
+                <li key={index}>
                     <div css={S.NoticeHeader}>
                         <span css={S.NoticeTitle}>{notice.title}</span>
                         <div>
